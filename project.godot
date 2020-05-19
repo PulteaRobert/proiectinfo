@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Proiect_Info"
 run/main_scene="res://src/World.tscn"
 
+[autoload]
+
+PlayerStats="*res://Characters/Player/PlayerStats.tscn"
+
 [display]
 
 window/size/width=800

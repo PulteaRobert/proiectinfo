@@ -1,7 +1,9 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/PIPOYA FREE RPG Character Sprites 32x32/Male/Male 01-1.png" type="Texture" id=1]
-[ext_resource path="res://src/NPC.gd" type="Script" id=2]
+[ext_resource path="res://Characters/NPC/NPC.gd" type="Script" id=2]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.71131

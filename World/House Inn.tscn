@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/generic rpg/props n decorations/generic-rpg-house-inn.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.7413, 17.9017 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 5.68434e-14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.115982, -0.115982 )
+scale = Vector2( 1.25, 1.25 )
+shape = SubResource( 1 )
+
+[node name="House Inn" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2( 0, -4.76837e-07 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )

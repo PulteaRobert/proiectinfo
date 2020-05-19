@@ -1,9 +1,11 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://assets/Action RPG Resources/Player/Player.png" type="Texture" id=1]
 [ext_resource path="res://Characters/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Characters/Player/SwordHitbox.gd" type="Script" id=4]
+[ext_resource path="res://Hitboxes and Hurtboxes/Hurtbox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Action RPG Resources/Shadows/MediumShadow.png" type="Texture" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.2513
@@ -603,12 +605,19 @@ graph_offset = Vector2( 0, 29.8744 )
 [sub_resource type="CapsuleShape2D" id=47]
 height = 12.0
 
+[sub_resource type="CapsuleShape2D" id=48]
+radius = 5.50968
+height = 6.7463
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
 
+[node name="Shadow" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -13.028 )
+position = Vector2( 0, -13.369 )
 texture = ExtResource( 1 )
 hframes = 60
 frame = 36
@@ -644,11 +653,6 @@ parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Roll/blend_position = Vector2( -0.450906, 0.357669 )
 parameters/Run/blend_position = Vector2( 0.000953317, 1.04483 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-rotating = true
-current = true
-zoom = Vector2( 0.5, 0.5 )
-
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
 rotation = 1.5708
@@ -666,4 +670,14 @@ position = Vector2( 9.53674e-07, -6.01289 )
 shape = SubResource( 47 )
 disabled = true
 
+[node name="Hurtbox" parent="." instance=ExtResource( 5 )]
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0, -9.10835 )
+shape = SubResource( 48 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
 [editable path="HitboxPivot/SwordHitbox"]
+
+[editable path="Hurtbox"]
