@@ -118,4 +118,3 @@ func _on_Hurtbox_area_entered(area):
 		Camera2D2.shake(0.2, 15, 8)
 		hurtbox.start_invincibility(1)
 		hurtbox.create_hit_effect(area)
-
