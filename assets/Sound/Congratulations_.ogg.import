@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Congratulations_.ogg-68c16a6256bbb083ee403eb9022e0a2b.oggstr"
+
+[deps]
+
+source_file="res://assets/Sound/Congratulations_.ogg"
+dest_files=[ "res://.import/Congratulations_.ogg-68c16a6256bbb083ee403eb9022e0a2b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

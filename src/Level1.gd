@@ -1,6 +1,9 @@
 extends Node2D
 
+func _ready():
+	yield(get_tree().create_timer(600.0), "timeout") 
+	$Area2D/CollisionShape2D.disabled = false
 
 
 func _on_Area2D_body_entered(body):
-	SceneChanger.change_scene("res://src/Congratsulation.tscn", 0.5)
+	$Congrats.play()

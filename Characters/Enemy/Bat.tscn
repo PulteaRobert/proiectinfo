@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/Action RPG Resources/Shadows/SmallShadow.png" type="Texture" id=1]
 [ext_resource path="res://assets/Action RPG Resources/Enemies/Bat.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Hitboxes and Hurtboxes/Stats.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Hitboxes and Hurtboxes/PlayerDetectionZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/Sound/Sword-attack.ogg" type="AudioStream" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -92,6 +93,9 @@ collision_mask = 4
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 0, -15.551 )
 shape = SubResource( 10 )
+
+[node name="SwordHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 

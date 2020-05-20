@@ -54,6 +54,8 @@ func seek_player():
 
 
 func _on_Hurtbox_area_entered(area):
+	$SwordHit.play()
+	$SwordHit.stop()
 	stats.health-= area.damage
 	knockback = area.knockback_vector * 150
 	create_hit_effect(area)
@@ -69,4 +71,4 @@ func _on_Stats_no_health():
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
-	
+
