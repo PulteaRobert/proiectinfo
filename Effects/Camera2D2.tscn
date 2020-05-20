@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Effects/Camera2D2.gd" type="Script" id=1]
+
+
+[node name="Camera2D2" type="Camera2D"]
+rotating = true
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_enabled = true
+script = ExtResource( 1 )

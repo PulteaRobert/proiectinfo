@@ -110,10 +110,12 @@ func roll_animation_finished():
 func attack_anim_finished():
 	state = MOVE
 
-
+#Daca intra in zona de unde iti poti lua damage
 
 func _on_Hurtbox_area_entered(area):
 	if state != ROLL:
 		stats.health -= 1
-		hurtbox.start_invincibility(0.5)
+		Camera2D2.shake(0.2, 15, 8)
+		hurtbox.start_invincibility(1)
 		hurtbox.create_hit_effect(area)
+

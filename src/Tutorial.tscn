@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Level1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Controale/D.png" type="Texture" id=2]
+[ext_resource path="res://src/Tutorial.gd" type="Script" id=3]
+[ext_resource path="res://assets/Controale/S.png" type="Texture" id=4]
+[ext_resource path="res://assets/Controale/A.png" type="Texture" id=5]
+[ext_resource path="res://assets/Controale/W.png" type="Texture" id=6]
+[ext_resource path="res://assets/Controale/space.png" type="Texture" id=7]
+[ext_resource path="res://assets/Controale/SHIFT.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 80, 144 )
+
+[node name="Tutorial" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Background" parent="." index="0"]
+position = Vector2( -200, -40.1463 )
+
+[node name="CliffMap" parent="." index="2"]
+tile_data = PoolIntArray( -131107, 0, 4, -131106, 0, 196609, -131105, 0, 196609, -131104, 0, 196609, -131103, 0, 196609, -131102, 0, 196609, -131101, 0, 196609, -131100, 0, 196609, -131099, 0, 196609, -131098, 0, 196609, -131097, 0, 196609, -131096, 0, 196609, -131095, 0, 196609, -131094, 0, 6, -131093, 0, 1, -131092, 0, 1, -131091, 0, 5, -131090, 0, 196609, -131089, 0, 196609, -131088, 0, 196609, -131087, 0, 196609, -131086, 0, 196609, -131085, 0, 7, -65571, 0, 65539, -65558, 0, 65536, -65557, 0, 65537, -65556, 0, 65537, -65555, 0, 65538, -65549, 0, 65539, -35, 0, 65539, -22, 0, 65536, -21, 0, 65537, -20, 0, 65537, -19, 0, 65538, -13, 0, 65539, -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 1, -65532, 0, 2, 65501, 0, 65539, 65514, 0, 65536, 65515, 0, 65537, 65516, 0, 65537, 65517, 0, 65538, 65523, 0, 65539, 65535, 0, 65536, 0, 0, 65541, 1, 0, 131073, 2, 0, 131073, 3, 0, 65542, 4, 0, 65538, 9, 0, 0, 10, 0, 1, 11, 0, 1, 12, 0, 2, 131037, 0, 65539, 131050, 0, 131072, 131051, 0, 131073, 131052, 0, 131073, 131053, 0, 131074, 131059, 0, 65539, 131071, 0, 131072, 65536, 0, 131074, 65539, 0, 131072, 65540, 0, 9, 65541, 0, 2, 65545, 0, 131072, 65546, 0, 65542, 65547, 0, 65537, 65548, 0, 65538, 196573, 0, 65539, 196595, 0, 65539, 131076, 0, 131072, 131077, 0, 131074, 131082, 0, 131072, 131083, 0, 131073, 131084, 0, 65543, 262109, 0, 65539, 262131, 0, 65539, 196620, 0, 131075, 327645, 0, 65539, 327658, 0, 0, 327659, 0, 1, 327660, 0, 1, 327661, 0, 2, 327667, 0, 65539, 393181, 0, 65539, 393194, 0, 65536, 393195, 0, 65537, 393196, 0, 65537, 393197, 0, 65538, 393203, 0, 65539, 458717, 0, 65539, 458730, 0, 65536, 458731, 0, 65537, 458732, 0, 65537, 458733, 0, 65538, 458739, 0, 65539, 393220, 0, 0, 393221, 0, 2, 524253, 0, 196612, 524254, 0, 196609, 524255, 0, 196609, 524256, 0, 196609, 524257, 0, 196609, 524258, 0, 196609, 524259, 0, 196609, 524260, 0, 196609, 524261, 0, 196609, 524262, 0, 196609, 524263, 0, 196609, 524264, 0, 196609, 524265, 0, 196609, 524266, 0, 196614, 524267, 0, 131073, 524268, 0, 131073, 524269, 0, 196613, 524270, 0, 196609, 524271, 0, 196609, 524272, 0, 196609, 524273, 0, 196609, 524274, 0, 196609, 524275, 0, 196615, 458752, 0, 0, 458753, 0, 1, 458754, 0, 1, 458755, 0, 1, 458756, 0, 131078, 458757, 0, 65538, 458763, 0, 3, 524288, 0, 65536, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65538, 524298, 0, 0, 524299, 0, 131080, 524300, 0, 2, 589824, 0, 131072, 589825, 0, 131073, 589826, 0, 131073, 589827, 0, 131073, 589828, 0, 131073, 589829, 0, 131074, 589833, 0, 196608, 589834, 0, 262150, 589835, 0, 65537, 589836, 0, 65538, 655370, 0, 131072, 655371, 0, 65542, 655372, 0, 131077, 655373, 0, 2, 720907, 0, 131072, 720908, 0, 131073, 720909, 0, 131074 )
+
+[node name="Player" parent="YSort" index="0"]
+position = Vector2( -904, 90.9057 )
+
+[node name="Controls" type="Node2D" parent="." index="5"]
+position = Vector2( -1048, -40 )
+
+[node name="Movement" type="Node2D" parent="Controls" index="0"]
+
+[node name="To Move" type="Label" parent="Controls/Movement" index="0"]
+margin_left = -16.0
+margin_top = 55.8537
+margin_right = 40.0
+margin_bottom = 69.8537
+text = "To move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="W" type="Sprite" parent="Controls/Movement" index="1"]
+position = Vector2( 16, 0 )
+texture = ExtResource( 6 )
+
+[node name="A" type="Sprite" parent="Controls/Movement" index="2"]
+position = Vector2( -24, 32 )
+texture = ExtResource( 5 )
+
+[node name="S" type="Sprite" parent="Controls/Movement" index="3"]
+position = Vector2( 14.5, 32 )
+texture = ExtResource( 4 )
+
+[node name="D" type="Sprite" parent="Controls/Movement" index="4"]
+position = Vector2( 48, 32 )
+texture = ExtResource( 2 )
+
+[node name="Roll" type="Node2D" parent="Controls" index="1"]
+position = Vector2( 8, -0.146294 )
+
+[node name="SHIFT" type="Sprite" parent="Controls/Roll" index="0"]
+position = Vector2( 120, 32.1463 )
+texture = ExtResource( 8 )
+
+[node name="To Roll" type="Label" parent="Controls/Roll" index="1"]
+margin_left = 104.0
+margin_top = 56.0
+margin_right = 144.0
+margin_bottom = 70.0
+text = "To roll"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Node2D" parent="Controls" index="2"]
+position = Vector2( 8, -0.146294 )
+
+[node name="space" type="Sprite" parent="Controls/Attack" index="0"]
+position = Vector2( 256, 32 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="Controls/Attack" index="1"]
+margin_left = 224.0
+margin_top = 56.0
+margin_right = 281.0
+margin_bottom = 70.0
+text = "To attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="." index="6"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( -496, 80 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
