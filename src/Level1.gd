@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	yield(get_tree().create_timer(600.0), "timeout") 
+	yield(get_tree().create_timer(1.0), "timeout") 
 	$Area2D/CollisionShape2D.disabled = false
 
 
