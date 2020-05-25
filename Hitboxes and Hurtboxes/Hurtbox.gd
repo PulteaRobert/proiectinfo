@@ -19,6 +19,7 @@ func start_invincibility(duration):
 	self.invincible = true
 	timer.start(duration)
 
+# warning-ignore:unused_argument
 func create_hit_effect(area):
 	var effect = HitEffect.instance()
 	var main = get_tree().current_scene

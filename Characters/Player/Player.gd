@@ -27,6 +27,11 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_restart"):
+		get_tree().reload_current_scene()
+
 func _physics_process(delta):
 	match state:
 		MOVE:
